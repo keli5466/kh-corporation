@@ -1,0 +1,20 @@
+{
+	"name": "zephyr/zephyr",
+	"type": "project",
+	"require": {
+		"bkwld/benchpress": "dev-master",
+		"vlucas/phpdotenv": "^2.4",
+		"pug-php/pug": "^2.6",
+		"illuminate/support": "^5.5",
+		"sentry/sentry": "^1.9"
+	},
+	"require-dev": {
+		"larapack/dd": "^1.1"
+	},
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/bkwld/benchpress"
+		}
+	]
+}

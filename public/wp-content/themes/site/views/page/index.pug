@@ -1,0 +1,17 @@
+- get_header()
+
+single-page(inline-template): .single-page
+  - global $post
+  - if ($image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full')[0])
+    .page-marquee
+  		visual(
+  			image=$image
+        poster=$image
+  			fill)
+  .content.max-w(v-in-viewport.once="-300")
+    h1!= the_title()
+    - while (have_posts())
+      - the_post()
+      != the_content()
+
+- get_footer()

@@ -1,0 +1,23 @@
+featured-boxes(inline-template): .home-page-featured-boxes#middle
+	.wrapped
+		.featured_box_container
+			- if (have_rows('featured_box'))
+				- while (have_rows('featured_box'))
+					- the_row()
+					box(inline-template): a.featured-box(href=get_sub_field('featured_cta') target="_blank")
+						.featured-video
+							- if ($image = get_sub_field('featured_img'))
+									visual(
+										:image=visualImgs($image)
+										background='')
+
+						.featured-logo
+							- if ($simage = get_sub_field('featured_logo'))
+								visual(
+									:image=visualImgs($simage)
+									background='')
+
+						p.copy!= get_sub_field('featured_copy')
+						.featured-btn Learn More
+
+

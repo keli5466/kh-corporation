@@ -1,0 +1,13 @@
+home-page(inline-template): .home-page#home(ref='homePge')
+	.preloadScreen(ref='preload')
+		!= pug('home/load_screen')
+	.clouds_TL(ref='topLeftCloud')
+	.clouds_M(ref='middleCloud')
+	.clouds_TR(ref='topRightCloud')
+	!= pug('home/featured_box')
+	!= pug('home/middle_content')
+	!= pug('home/home_hero')
+	.layer1_car(ref='layer1Car')
+	.layer2_building(ref='layer2Building')
+	.layer3_sky#tt(ref='layer3Sky')
+	

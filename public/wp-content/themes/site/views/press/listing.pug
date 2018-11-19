@@ -1,0 +1,19 @@
+press-listing(inline-template): .press-listing
+	#leadership
+	- if (have_rows('profile'))
+		.bios.block
+			header.block-header(v-in-viewport.once='-200')
+				h2!= get_field('profiles_title')
+
+			ul.group
+				- while (have_rows('profile'))
+					- the_row()
+					li.item.bio(v-in-viewport.once="-200")
+						-if ($image = get_sub_field('image'))
+							.image: visual.inner-image(
+									:image=visualimgs($image))
+						.content
+							.header
+								h3.name!= get_sub_field('name')
+								h4.job-title!= get_sub_field('title')
+							.description!= get_sub_field('bio')

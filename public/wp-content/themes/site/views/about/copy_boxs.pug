@@ -1,0 +1,15 @@
+.wrapped
+	copy-boxes(inline-template): .copy-boxes
+			- if (have_rows('copy_boxs'))
+				- $i = 0
+				- while (have_rows('copy_boxs'))
+					- the_row()
+					box(inline-template)
+						.copy-box#copy(
+							:index=$i)
+							h1.headline!= get_sub_field('headline')
+							.left_line
+								p.copy!= get_sub_field('copy_text')
+								.arrow
+					- $i++
+				

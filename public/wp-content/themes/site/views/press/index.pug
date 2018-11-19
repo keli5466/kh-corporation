@@ -1,0 +1,10 @@
+- get_header()
+press-page(inline-template): .press-page
+
+	!= pug('press/marquee')
+	!= pug('press/listing')
+	!= pug('press/about')
+
+	- if ($image = get_field('footer_image'))
+			visual.bkgd(:image=visualimgs($image) background='cover')
+- get_footer()

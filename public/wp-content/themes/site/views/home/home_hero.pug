@@ -1,0 +1,11 @@
+home-hero(inline-template): .home-hero#hero
+	.wrapped
+		.text-container(v-in-viewport='{ bottom: 0, top: -300 }'
+			@click='smoothScroll("#middle")')
+			.headline
+				h1!= get_field('headline')
+			p scroll up
+			- if ($img = get_template_directory_uri() . '/assets/img/dark-outline-animated-v2.gif')
+				img.mobile.scroller(src=$img)
+			a.icon-up-arrow
+			

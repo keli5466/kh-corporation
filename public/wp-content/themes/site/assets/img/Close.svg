@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Mobile-Nav-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-337.000000, -17.000000)">
+        <g id="Group" transform="translate(335.000000, 15.000000)" fill="#FFFFFF">
+            <g id="Group-2" transform="translate(10.000000, 10.000000) rotate(45.000000) translate(-10.000000, -10.000000) ">
+                <rect id="Rectangle-2-Copy" x="0" y="9.22222222" width="20" height="1.55555556" rx="0.777777778"></rect>
+                <rect id="Rectangle-2-Copy" transform="translate(10.000000, 10.000000) rotate(90.000000) translate(-10.000000, -10.000000) " x="0" y="9.22222222" width="20" height="1.55555556" rx="0.777777778"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

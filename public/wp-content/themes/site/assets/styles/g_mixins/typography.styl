@@ -1,0 +1,91 @@
+font(style, size = null, color = null, font-weight = null , letter-spacing = null, lineheight = null)
+
+	if style != 'icon'
+		font-family style
+		letter-spacing rem(letter-spacing)
+		// line-height lineheight
+		// font-weight weight
+
+	// Icomoon
+	else
+		font-family 'icomoon' !important;
+		speak none
+		font-style normal
+		font-weight normal
+		font-variant normal
+		text-transform none
+		line-height 1
+
+	// Add font size using the rem value of what was passed in
+	font-size size if size
+	line-height lineheight if lineheight
+
+	// letter-spacing letter-spacing in letter-spacing
+	// Add font color
+	color color if color
+
+	font-weight font-weight if font-weight
+
+
+
+@font-face
+	font-family 'icomoon'
+	src url('~fonts/icomoon.ttf') format('truetype'),
+		url('~fonts/icomoon.woff') format('woff'),
+		url('~fonts/icomoon.svg') format('svg')
+	font-weight normal
+	font-style normal
+	text-decoration none
+
+[class^="icon-"], [class*=" icon-"]
+	font-family 'icomoon' !important
+	speak none
+	font-style normal
+	font-weight normal
+	font-variant normal
+	text-decoration none
+	text-transform none
+	line-height 1
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing antialiased
+	-moz-osx-font-smoothing grayscale
+
+.icon-InstagramButton
+	&:before
+		content icon-InstagramButton
+.icon-kh-logo
+	&:before
+		content icon-kh-logo
+.icon-close
+	&:before
+		content icon-close
+.icon-cora
+	&:before
+		content icon-cora
+.icon-facebook
+	&:before
+		content icon-facebook
+.icon-flyer
+	&:before
+		content icon-flyer
+.icon-hamburger
+	&:before
+		content icon-hamburger
+.icon-up-arrow
+	text-align: center
+	display block
+	position: relative
+	&:after
+		content icon-up-arrow
+		font(icon,25px)
+		font-weight 400
+.icon-plus
+	&:before
+		content icon-plus
+.icon-twitter
+	&:before
+		content icon-twitter
+.icon-youtube
+	&:before
+		content icon-youtube

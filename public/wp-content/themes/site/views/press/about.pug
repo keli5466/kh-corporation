@@ -1,0 +1,14 @@
+press-about(inline-template): .press-about
+	#about
+	- if (have_rows('copy_box'))
+		.about.block(v-in-viewport.once='-200')
+			.block-header
+				h2!= get_field('about_title')
+
+			ul.group
+				- while (have_rows('copy_box'))
+					- the_row()
+					li.item.about-box
+						.header
+							h3.title!= get_sub_field('headline')
+						.copy!= get_sub_field('copy')

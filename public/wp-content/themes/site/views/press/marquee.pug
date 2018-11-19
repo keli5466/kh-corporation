@@ -1,0 +1,43 @@
+press-marquee(inline-template): .press-marquee
+
+	//- Desktop image
+
+	- if ($image = get_field('image'))
+		visual.desktop.image(
+			:image=visualImgs($image)
+			background='cover'
+			poster=posterImg($image)
+			fill)
+
+	//- Tablet image
+
+	- if ($image=get_field('tablet_image'))
+		visual.tablet.image(
+			:image=visualImgs($image)
+			poster=posterImg($image)
+			background='')
+
+	//- Mobile image
+
+	- if ($image = get_field('mobile_image'))
+		visual.mobile.image(
+			:image=visualImgs($image)
+			poster=posterImg($image)
+			background='')
+
+		//- Content box
+
+		.content(v-in-viewport.once="-300")
+			.wrapper(v-in-viewport.once='-200')
+				.content-header
+					h1!= get_field('title')
+				- if (have_rows('contact_options'))
+					ul.box
+						- while (have_rows('contact_options'))
+							- the_row()
+							- $href = get_sub_field('contact_email')
+							- $title = get_sub_field('contact_text')
+							li.item: a(href='mailto:#{$href}')
+								strong!=$title
+								p!=$href
+

@@ -1,0 +1,12 @@
+about-page(inline-template): .about-page
+	.content
+		!= pug('about/copy_boxs')
+	.bg
+		- if ($image = get_field('background_image'))
+			img.image(src=$image['sizes']['xl'])
+				
+		- if($image = get_field('mobile_background_image'))
+			visual.mobile(
+				:image=visualImgs($image)
+				background=''
+				width = '100%')
